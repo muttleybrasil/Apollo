@@ -1,0 +1,21 @@
+<section>
+    <table class="table table-striped">
+        <caption>Eventos</caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data</th>
+                <th>Local</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="evento in eventos">
+                <td>{{ evento.nome }}</td>
+                <td>{{ evento.data }}</td>
+                <td>{{ evento.local }}</td>
+                <td><button class="btn btn-warning" data-ng-click="remove($index)">Remover</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>{{ eventos | json }}</pre>
+</section>
