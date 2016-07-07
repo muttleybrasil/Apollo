@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Apollo Produções</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -16,7 +16,10 @@
                     <a class="nav-link" href="#">Início<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="web/view/evento.html">Evento</a>
+                    <a class="nav-link" href="web/views/evento.htm">Evento</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="web/views/musica.htm">Música</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Cliente</a>

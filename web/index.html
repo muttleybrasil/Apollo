@@ -64,6 +64,7 @@
                         }];
                         $routeProvider
                             .when('/evento', { templateUrl: 'views/evento.htm', controller: 'EventoController', controllerAs: 'ctrl' })
+                            .when('/musica', { templateUrl: 'views/musica.htm', controller: 'MusicaController', controllerAs: 'ctrl' })
                             .otherwise({ redirectTo: '/home.htm' });
                     });
             apolloApp.controller("MainController", function(
@@ -86,6 +87,7 @@
         <script src="scripts/constants.js"></script>
         <!-- Controllers -->
         <script src="scripts/controllers/evento-controller.js"></script>
+        <script src="scripts/controllers/musica-controller.js"></script>
         <!-- Services -->
         <!-- script src="../comum/scripts/services/atividade-service.js"></script -->
         <!-- Models -->

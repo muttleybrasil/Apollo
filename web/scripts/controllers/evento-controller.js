@@ -8,5 +8,5 @@ apolloApp.controller('EventoController', ['$scope', function($scope) {
     ];
     $scope.remove = function(index) {
         $scope.eventos.splice(index, 1);
-    }
+    };
 }]);

@@ -1,0 +1,20 @@
+<section>
+    <table class="table table-striped">
+        <caption>Músicas</caption>
+        <thead>
+            <tr>
+                <th>Momento</th>
+                <th>Música</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="musica in musicas">
+                <td>{{ musica.momento }}</td>
+                <td>{{ musica.nome }}</td>
+                <td>{{ musica.link }}</td>
+                <td><button class="btn btn-warning" data-ng-click="remove($index)">Remover</button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
