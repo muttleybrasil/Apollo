@@ -4,14 +4,31 @@
         <meta charset="utf-8">
         <title>Apollo Produções</title>
         <link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="../vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" href="styles/style.css" rel="stylesheet">
     </head>
     <body data-ng-app="apolloApp" data-ng-controller="MainController as ctrl">
-        <header>
-            <h1><a href="#/home">Apollo Produções</a></h1>
-        </header>
-        <div data-ng-include="'views/nav.htm'"></div>
-        <div class="container container-fluid">
-            <div data-ng-view=""></div>
+        <div id="wrapper">
+            <div data-ng-include="'views/nav.htm'"></div>
+            <div id="page-wrapper" class="gray-bg dashbard-1">
+                <div class="row border-bottom">
+                    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                        <div class="navbar-header">
+                            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                            <form role="search" class="navbar-form-custom" action="search_results.html">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Pesquisar..." class="form-control" name="top-search" id="top-search">
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="row  border-bottom white-bg dashboard-header">
+                    <div data-ng-view=""></div>
+                </div>
+            </div>
         </div>
         <!-- thirdpart -->
         <script src="../vendor/jquery/dist/jquery.min.js"></script>
@@ -19,6 +36,8 @@
         <script src="../vendor/angular/angular.min.js"></script>
         <script src="../vendor/angular-route/angular-route.min.js"></script>
         <script src="../vendor/angular-ui-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="../vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="../vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js"></script>
         <!-- /thirdpart -->
         <script>
             var apolloApp = angular
@@ -63,13 +82,22 @@
                                 return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
                         }];
                         $routeProvider
-                            .when('/evento', { templateUrl: 'views/evento.htm', controller: 'EventoController', controllerAs: 'ctrl' })
+                            .when('/evento', { templateUrl: 'views/evento-grid.htm', controller: 'EventoGridController', controllerAs: 'ctrl' })
+                            .when('/evento/adicionar', { templateUrl: 'views/evento-form.htm', controller: 'EventoFormController', controllerAs: 'ctrl' })
                             .otherwise({ redirectTo: '/home.htm' });
                     });
+
             apolloApp.controller("MainController", function(
                 $rootScope, $scope, $http, $location, BASE_URL
             ) {
                 var ctrl = this;
+
+                // controle de menu "active"
+                $scope.$watch(function() {
+                    return $location.path();
+                }, function(){
+                    
+                });
 
                 $scope.testIndexof = function (list, object, attribute) {
                     attribute = attribute !== undefined ? attribute : 'id';
@@ -81,11 +109,18 @@
                     return false;
                 };
             });
+            
+            // wrapper
+            $( document ).ready(function() {
+                $('#page-wrapper').css('min-height', $(document).height());
+            });
         </script>
         <!-- Constants -->
         <script src="scripts/constants.js"></script>
         <!-- Controllers -->
-        <script src="scripts/controllers/evento-controller.js"></script>
+        <script src="scripts/controllers/navigation-controller.js"></script>
+        <script src="scripts/controllers/evento-grid-controller.js"></script>
+        <script src="scripts/controllers/evento-form-controller.js"></script>
         <!-- Services -->
         <!-- script src="../comum/scripts/services/atividade-service.js"></script -->
         <!-- Models -->

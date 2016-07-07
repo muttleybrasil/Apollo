@@ -1,4 +1,4 @@
-apolloApp.controller('EventoController', ['$scope', function($scope) {
+apolloApp.controller('EventoGridController', ['$scope', function($scope) {
     $scope.eventos = [
      {id: 1, nome: "Casal 01", data: "03/08/2017 19:00:00", local: "Local evento 01"},
      {id: 2, nome: "Casal 02", data: "03/08/2017 19:00:00", local: "Local evento 02"},
