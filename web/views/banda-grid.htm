@@ -1,0 +1,23 @@
+<section>
+    <h2>
+        Banda
+        <a href="#/banda/adicionar" class="btn btn-success pull-right">Adicionar</a>
+    </h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Instrumento</th>
+                <th>Músico</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="banda in banda">
+                <td>{{ banda.instrumento }}</td>
+                <td>{{ banda.musico }}</td>
+                <td>{{ banda.status }}</td>
+                <td><button class="btn btn-warning" data-ng-click="remove($index)">Remover</button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>

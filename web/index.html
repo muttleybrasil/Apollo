@@ -84,6 +84,13 @@
                         $routeProvider
                             .when('/evento', { templateUrl: 'views/evento-grid.htm', controller: 'EventoGridController', controllerAs: 'ctrl' })
                             .when('/evento/adicionar', { templateUrl: 'views/evento-form.htm', controller: 'EventoFormController', controllerAs: 'ctrl' })
+                            .when('/repertorio', { templateUrl: 'views/repertorio-grid.htm', controller: 'RepertorioGridController', controllerAs: 'ctrl' })
+                            .when('/repertorio/editar', { templateUrl: 'views/musica-grid.htm', controller: 'MusicaGridController', controllerAs: 'ctrl' })
+                            .when('/banda', { templateUrl: 'views/banda-grid.htm', controller: 'BandaGridController', controllerAs: 'ctrl' })
+                            .when('/banda/adicionar', { templateUrl: 'views/banda-form.htm', controller: 'BandaFormController', controllerAs: 'ctrl' })
+                            .when('/musica/adicionar', { templateUrl: 'views/musica-form.htm', controller: 'MusicaFormController', controllerAs: 'ctrl' })
+                            .when('/musica/concluir', { templateUrl: 'views/repertorio-grid.htm', controller: 'RepertorioGridController', controllerAs: 'ctrl' })
+                            .when('/musica/cancelar', { templateUrl: 'views/musica-grid.htm', controller: 'MusicaGridController', controllerAs: 'ctrl' })
                             .otherwise({ redirectTo: '/home.htm' });
                     });
 
@@ -121,6 +128,12 @@
         <script src="scripts/controllers/navigation-controller.js"></script>
         <script src="scripts/controllers/evento-grid-controller.js"></script>
         <script src="scripts/controllers/evento-form-controller.js"></script>
+        <script src="scripts/controllers/repertorio-grid-controller.js"></script>
+        <script src="scripts/controllers/repertorio-form-controller.js"></script>
+        <script src="scripts/controllers/banda-grid-controller.js"></script>
+        <script src="scripts/controllers/banda-form-controller.js"></script>
+        <script src="scripts/controllers/musica-grid-controller.js"></script>
+        <script src="scripts/controllers/musica-form-controller.js"></script>
         <!-- Services -->
         <!-- script src="../comum/scripts/services/atividade-service.js"></script -->
         <!-- Models -->

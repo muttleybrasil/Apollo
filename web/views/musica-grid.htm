@@ -1,0 +1,26 @@
+<section>
+    <h2>
+        Músicas
+        <a href="#/musica/adicionar" class="btn btn-success pull-right">Adicionar</a>
+    </h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Momento</th>
+                <th>Música</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="musica in musicas">
+                <td>{{ musica.momento }}</td>
+                <td>{{ musica.nome }}</td>
+                <td>{{ musica.link }}</td>
+                <td><button class="btn btn-warning" data-ng-click="remove($index)">Remover</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>
+        <a href="#/musica/concluir" class="btn btn-success pull-right">Concluído</a>
+    </h2>
+</section>

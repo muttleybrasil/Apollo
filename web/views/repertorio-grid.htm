@@ -1,0 +1,22 @@
+<section>
+    <h2>
+        Repertório
+    </h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Evento</th>
+                <th>Data</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="repertorio in repertorios">
+                <td>{{ repertorio.evento }}</td>
+                <td>{{ repertorio.data }}</td>
+                <td>{{ repertorio.status }}</td>
+                <td><a href="#/repertorio/editar" class="btn btn-warning">Editar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
