@@ -84,6 +84,7 @@
                         $routeProvider
                             .when('/evento', { templateUrl: 'views/evento-grid.htm', controller: 'EventoGridController', controllerAs: 'ctrl' })
                             .when('/evento/adicionar', { templateUrl: 'views/evento-form.htm', controller: 'EventoFormController', controllerAs: 'ctrl' })
+                            .when('/evento/:id', { templateUrl: 'views/evento-form.htm', controller: 'EventoFormController', controllerAs: 'ctrl' })
                             .otherwise({ redirectTo: '/home.htm' });
                     });
 

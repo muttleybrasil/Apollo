@@ -16,7 +16,10 @@
                 <td>{{ evento.nome }}</td>
                 <td>{{ evento.data }}</td>
                 <td>{{ evento.local }}</td>
-                <td><button class="btn btn-warning" data-ng-click="remove($index)">Remover</button></td>
+                <td>
+                    <a href="#/evento/{{ evento.id }}" class="btn btn-success">Editar</a>
+                    <button class="btn btn-warning" data-ng-click="remove($index)">Remover</button>
+                </td>
             </tr>
         </tbody>
     </table>

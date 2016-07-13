@@ -2,25 +2,25 @@
     <h2>Evento</h2>
     <form role="form">
         <div class="form-group col-md-5">
-            <label for="nome">Casal:</label>
-            <input type="text" class="form-control" id="nome">
+            <label for="nome">Noivos:</label>
+            <input type="text" class="form-control" id="nome" data-ng-model="evento.nome">
         </div>
         <div class="form-group col-md-3">
             <label for="dataEvento">Data Evento:</label>
             <div class="input-group date">
-                <input type="text" name="dataEvento" id="dataEvento" class="form-control">
+                <input type="text" name="dataEvento" id="dataEvento" class="form-control" data-ng-model="evento.dataEvento">
                 <div class="input-group-addon">
                     <span class="glyphicon glyphicon-th"></span>
                 </div>
             </div>
         </div>
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-12">
             <label for="nome">Local:</label>
-            <input type="text" class="form-control" id="local">
+            <input type="text" class="form-control" id="local" data-ng-model="evento.local">
         </div>
-        <div class="col-md-12">
-            <button type="submit" class="btn btn-success pull-right">Salvar</button>
-            <a href="#/evento" class="btn btn-warning pull-right">Cancelar</a>
+        <div class="pull-right">
+            <a href="#/evento" class="btn btn-warning">Cancelar</a>
+            <button type="submit" class="btn btn-success">Salvar</button>
         </div>
     </form>
 </section>
