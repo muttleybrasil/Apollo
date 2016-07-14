@@ -1,0 +1,22 @@
+<section>
+    <h2>
+        Momentos
+        <a href="#/momento/adicionar" class="btn btn-success pull-right">Adicionar</a>
+    </h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="momento in ctrl.momentos" class="grid-item">
+                <td>{{ momento.nome }}{{ momento.class }}</td>
+                <td>
+                    <a href="#/momento/{{ momento.id }}" class="btn btn-success">Editar</a>
+                    <button class="btn btn-warning" data-ng-click="ctrl.remove(momento)">Remover</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

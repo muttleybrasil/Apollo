@@ -1,0 +1,14 @@
+<section>
+    <h2>Momento</h2>
+    <form role="form">
+        <div class="form-group col-md-12">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" data-ng-model="ctrl.nome">
+        </div>
+        <div class="pull-right">
+            <a href="#/momento" class="btn btn-warning">Cancelar</a>
+            <button type="submit" class="btn btn-success" data-ng-click="ctrl.create()" data-ng-hide="ctrl.id">Salvar</button>
+            <button type="submit" class="btn btn-success" data-ng-click="ctrl.update()" data-ng-show="ctrl.id">Salvar</button>
+        </div>
+    </form>
+</section>
